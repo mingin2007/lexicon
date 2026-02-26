@@ -1,0 +1,173 @@
+{"lexicon":
+[
+    {"letter" : "Α", 
+    "count" : 2, 
+    "entries":[
+        {"lemma":"Ανατολική Θράκη", "definition":"Περιοχή στη σημερινή Τουρκία. Πριν το 1922 ζούσαν εκεί πολλοί Έλληνες. Ανάμεσά τους και οι πρόσφυγες που εγκαταστάθηκαν στην Νέα Κερασιά", "image":""},
+        {"lemma":"Αγγελοχώρι", "definition":"Χωριό του Δήμου Θερμαϊκού, ανάμεσα στην Αγία Τριάδα και στην Νέα Κερασιά.", "image":""}
+    ]
+    },
+    {"letter" : "Β", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+
+    {"letter" : "Γ", 
+    "count" : 2, 
+    "entries":[
+        {"lemma":"Γανοχώρια", "definition":"Χωριά στην Ανατολική Θράκη, όπου κατοικούσαν πολλοί Έλληνες. Πήραν το όνομά τους από το χωριό Γάνος, που ήταν το μεγαλύτερο της περιοχής. Ένα από τα Γανοχώρια ήταν και η Κερασιά!", "image":""},
+        {"lemma":"Γάνος", "definition":"Μεγάλο χωριό στην Ανατολική Θράκη, κοντά στην Κερασιά. Έδωσε το όνομά του σε μια ομάδα χωριών, που ονομάστηκαν Γανοχώρια.", "image":""}
+    ]
+    },
+    {"letter" : "Δ", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Ε", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Ζ", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Η", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Θ", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Ι", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Κ", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Λ", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Μ", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Ν", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Ξ", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Ο", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Π", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Ρ", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Σ", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Τ", 
+    "count" : 1, 
+    "entries":[
+        {"lemma":"Τσιφλίκι", "definition":"Το τσιφλίκι ήταν μια έκταση με χωράφια που είχε ένα πλούσιος άνθρωπος, που λεγόταν τσιφλικάς. Το χωριό μας πριν εγκατασταθούν οι πρόσφυγες ήταν ένα τσιφλίκι που το είχε ένας Τούρκος αγάς.", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Υ", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Φ", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Χ", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Ψ", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    },
+    {"letter" : "Ω", 
+    "count" : 0, 
+    "entries":[
+        {"lemma":"", "definition":"", "image":""},
+        {"lemma":"", "definition":"", "image":""}
+    ]
+    }
+]
+
+}
