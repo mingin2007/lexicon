@@ -32,46 +32,49 @@ window.onload = ()=>{
 };
 
 function handleResponse(data){
-    //console.log(data.lexicon[0].letter);
-    //let container = document.getElementById('entries-container');
-    //container.textContent = '';
-    //const kefalida = document.getElementById('kefalida');
-    //kefalida.innerHTML = data.letter;
+
     let letterButtons = document.getElementsByTagName("button");
     data.lexicon.forEach((element, index) => {
         if(element.count == 0){
             //console.log(element.letter + " has no entries");
             letterButtons[index].setAttribute('disabled', "true");
         }
+    });    
     for(let i=0; i<letterButtons.length; i++){
         letterButtons[i].addEventListener('click', (e)=>{
-            let url = i;
-            console.log('url ' + url);
-            
+            populatePage(data.lexicon[i]);
         });
     }            
-        // const lemma = document.createElement('p');
-        // const definition = document.createElement('p');
-        // const pic = document.createElement('img');
-        // const entry = document.createElement('div');
-        // const imglink = document.createElement('a');
-        // lemma.classList.add("lemma");
-        // definition.classList.add('definition');
-        // entry.classList.add('entry-container');
-        // lemma.innerHTML = element.lemma;
-        // definition.innerHTML = element.definition;
+       
+}
+
+function populatePage(words){
+    //console.log(data.lexicon[0].letter);
+    let container = document.createElement('div');
+    document.getElementsByTagName('body')[0].appendChild(container);
+    //container.textContent = '';
+    //const kefalida = document.getElementById('kefalida');
+    //kefalida.innerHTML = data.letter;
+    const lemma = document.createElement('p');
+    const definition = document.createElement('p');
+    const pic = document.createElement('img');
+    const entry = document.createElement('div');
+    const imglink = document.createElement('a');
+    lemma.classList.add("lemma");
+    definition.classList.add('definition');
+    entry.classList.add('entry-container');
+    lemma.innerHTML = words.entries[0].lemma;
+    definition.innerHTML = words.entries[0].definition;
         // pic.src = "/img/" + (element.image === "" ? "logo.png" : element.image);
         // imglink.setAttribute('target', "_blank");
         // imglink.setAttribute('href', pic.src);
         // imglink.id = "img-link";
-        // console.log(pic.src);
-        // container.appendChild(lemma);
-        // entry.appendChild(definition);
         // imglink.appendChild(pic);
+        console.log("booh" + pic.src);
+        container.appendChild(lemma);
+        entry.appendChild(definition);
+        // 
         // entry.appendChild(imglink);
-        // container.appendChild(entry);
-
-    });
+        container.appendChild(entry);
 }
-
 
