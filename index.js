@@ -1,9 +1,11 @@
 window.onload = ()=>{
+    
+    
     let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = () =>{
+    xhr.onreadystatechange = (entries) =>{
         if (xhr.readyState === 4 && xhr.status===200){
             //console.log(xhr.response);
-            handleResponse(JSON.parse(xhr.response));
+             handleResponse(JSON.parse(xhr.response));
         }
         else{
             console.log("boil them, Harry!");
@@ -15,15 +17,17 @@ window.onload = ()=>{
 
 
 
-
-    let bt = document.getElementsByTagName("button");
-    for(let i=0; i<bt.length; i++){
-        bt[i].addEventListener('click', (e)=>{
+    /* let buttons = document.getElementsByTagName("button");
+    for(let i=0; i<buttons.length; i++){
+        buttons[i].addEventListener('click', (e)=>{
             let url = i;
             console.log('url ' + url);
             
         });
     }
+ */
+
+
         
 };
 
@@ -36,10 +40,16 @@ function handleResponse(data){
     let letterButtons = document.getElementsByTagName("button");
     data.lexicon.forEach((element, index) => {
         if(element.count == 0){
-            console.log(element.letter + " has no entries");
+            //console.log(element.letter + " has no entries");
             letterButtons[index].setAttribute('disabled', "true");
         }
-                
+    for(let i=0; i<letterButtons.length; i++){
+        letterButtons[i].addEventListener('click', (e)=>{
+            let url = i;
+            console.log('url ' + url);
+            
+        });
+    }            
         // const lemma = document.createElement('p');
         // const definition = document.createElement('p');
         // const pic = document.createElement('img');
