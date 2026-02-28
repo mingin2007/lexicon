@@ -50,31 +50,35 @@ function handleResponse(data){
 
 function populatePage(words){
     //console.log(data.lexicon[0].letter);
-    let container = document.createElement('div');
-    document.getElementsByTagName('body')[0].appendChild(container);
-    //container.textContent = '';
+    let container = document.getElementById('entries-container');
+    container.textContent = '';
     //const kefalida = document.getElementById('kefalida');
     //kefalida.innerHTML = data.letter;
-    const lemma = document.createElement('p');
-    const definition = document.createElement('p');
-    const pic = document.createElement('img');
-    const entry = document.createElement('div');
-    const imglink = document.createElement('a');
-    lemma.classList.add("lemma");
-    definition.classList.add('definition');
-    entry.classList.add('entry-container');
-    lemma.innerHTML = words.entries[0].lemma;
-    definition.innerHTML = words.entries[0].definition;
-        // pic.src = "/img/" + (element.image === "" ? "logo.png" : element.image);
-        // imglink.setAttribute('target', "_blank");
-        // imglink.setAttribute('href', pic.src);
-        // imglink.id = "img-link";
-        // imglink.appendChild(pic);
-        console.log("booh" + pic.src);
+    for (var i=0; i<words.count; i++){
+        const lemma = document.createElement('p');
+        const definition = document.createElement('p');
+        const pic = document.createElement('img');
+        const entry = document.createElement('div');
+        const imglink = document.createElement('a');
+        lemma.classList.add("lemma");
+        definition.classList.add('definition');
+        entry.classList.add('entry-container');
+        lemma.innerHTML = words.entries[i].lemma;
+        definition.innerHTML = words.entries[i].definition;
         container.appendChild(lemma);
         entry.appendChild(definition);
         // 
         // entry.appendChild(imglink);
         container.appendChild(entry);
+    
+    };
+
+        // pic.src = "/img/" + (element.image === "" ? "logo.png" : element.image);
+        // imglink.setAttribute('target', "_blank");
+        // imglink.setAttribute('href', pic.src);
+        // imglink.id = "img-link";
+        // imglink.appendChild(pic);
+        //console.log("booh" + pic.src);
+        
 }
 
