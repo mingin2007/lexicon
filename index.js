@@ -66,19 +66,20 @@ function populatePage(words){
         lemma.innerHTML = words.entries[i].lemma;
         definition.innerHTML = words.entries[i].definition;
         container.appendChild(lemma);
-        entry.appendChild(definition);
-        // 
-        // entry.appendChild(imglink);
+        entry.appendChild(definition); 
+        entry.appendChild(imglink);
         container.appendChild(entry);
-    
+        pic.src = "/img/" + (element.image === "" ? "logo.png" : element.image);
+        imglink.setAttribute('target', "_blank");
+        imglink.setAttribute('href', pic.src);
+        imglink.id = "img-link";
+        imglink.appendChild(pic);
+        console.log("booh" + pic.src);    
+
+
     };
 
-        // pic.src = "/img/" + (element.image === "" ? "logo.png" : element.image);
-        // imglink.setAttribute('target', "_blank");
-        // imglink.setAttribute('href', pic.src);
-        // imglink.id = "img-link";
-        // imglink.appendChild(pic);
-        //console.log("booh" + pic.src);
+
         
 }
 
