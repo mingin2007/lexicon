@@ -3,40 +3,26 @@ window.onload = ()=>{
     
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = (entries) =>{
-        if (xhr.readyState === 4 && xhr.status===200){
-            //console.log(xhr.response);
-             handleResponse(JSON.parse(xhr.response));
-        }
-        else{
-            console.log("boil them, Harry!");
-        }
+        if (xhr.readyState === 4){
+            if(xhr.status===200){
+                handleResponse(JSON.parse(xhr.response));
+                document.getElementById("kefalida").innerHTML = "<h2>Διαλέξτε γράμμα!</h2>";
+            }else{
+                document.getElementById("kefalida").innerHTML = "<h2>Δεν υπάρχουν λέξεις!</h2>";
+            }
+        } 
+            
+        
     }
     //console.log("btn clicked: " + e.target.innerHTML);
     xhr.open("GET", '/entries/entries.JSON', true);
     xhr.send();
-
-
-
-    /* let buttons = document.getElementsByTagName("button");
-    for(let i=0; i<buttons.length; i++){
-        buttons[i].addEventListener('click', (e)=>{
-            let url = i;
-            console.log('url ' + url);
-            
-        });
-    }
- */
-
-
-        
 };
 
 function handleResponse(data){
-
     let letterButtons = document.getElementsByTagName("button");
     data.lexicon.forEach((element, index) => {
         if(element.count == 0){
-            //console.log(element.letter + " has no entries");
             letterButtons[index].setAttribute('disabled', "true");
         }
     });    
@@ -45,11 +31,9 @@ function handleResponse(data){
             populatePage(data.lexicon[i]);
         });
     }            
-       
 }
 
 function populatePage(words){
-    //console.log(data.lexicon[0].letter);
     let container = document.getElementById('entries-container');
     container.textContent = '';
     const kefalida = document.getElementById('kefalida');
@@ -75,11 +59,7 @@ function populatePage(words){
         imglink.id = "img-link";
         imglink.appendChild(pic);
         console.log("booh" + pic.src);    
-
-
     };
-
-
-        
 }
+
 
