@@ -52,8 +52,8 @@ function populatePage(words){
     //console.log(data.lexicon[0].letter);
     let container = document.getElementById('entries-container');
     container.textContent = '';
-    //const kefalida = document.getElementById('kefalida');
-    //kefalida.innerHTML = data.letter;
+    const kefalida = document.getElementById('kefalida');
+    kefalida.innerHTML = words.letter;
     for (var i=0; i<words.count; i++){
         const lemma = document.createElement('p');
         const definition = document.createElement('p');
@@ -69,7 +69,7 @@ function populatePage(words){
         entry.appendChild(definition); 
         entry.appendChild(imglink);
         container.appendChild(entry);
-        pic.src = "/img/" + (element.image === "" ? "logo.png" : element.image);
+        pic.src = "/img/" + (words.entries[i].image === "" ? "logo.png" : words.entries[i].image);
         imglink.setAttribute('target', "_blank");
         imglink.setAttribute('href', pic.src);
         imglink.id = "img-link";
