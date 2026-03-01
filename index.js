@@ -28,7 +28,7 @@ function handleResponse(data){
     });    
     for(let i=0; i<letterButtons.length; i++){
         letterButtons[i].addEventListener('click', (e)=>{
-            populatePage(data.lexicon[i]);
+        populatePage(data.lexicon[i]);
         });
     }            
 }
@@ -38,6 +38,10 @@ function populatePage(words){
     container.textContent = '';
     const kefalida = document.getElementById('kefalida');
     kefalida.innerHTML = words.letter;
+    let sortedData = words.entries.sort(function(first, second){
+            return first.lemma.localeCompare(second.lemma);
+        });
+
     for (var i=0; i<words.count; i++){
         const lemma = document.createElement('p');
         const definition = document.createElement('p');
@@ -47,13 +51,15 @@ function populatePage(words){
         lemma.classList.add("lemma");
         definition.classList.add('definition');
         entry.classList.add('entry-container');
-        lemma.innerHTML = words.entries[i].lemma;
-        definition.innerHTML = words.entries[i].definition;
+        //lemma.innerHTML = words.entries[i].lemma;
+        //definition.innerHTML = words.entries[i].definition;
+        lemma.innerHTML = sortedData[i].lemma;
+        definition.innerHTML = sortedData[i].definition;
         container.appendChild(lemma);
         entry.appendChild(definition); 
         entry.appendChild(imglink);
         container.appendChild(entry);
-        pic.src = "/img/" + (words.entries[i].image === "" ? "logo.png" : words.entries[i].image);
+        pic.src = "/img/" + (sortedData[i].image === "" ? "logo.png" : sortedData[i].image);
         imglink.setAttribute('target', "_blank");
         imglink.setAttribute('href', pic.src);
         imglink.id = "img-link";
